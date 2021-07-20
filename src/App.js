@@ -6,13 +6,17 @@ function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>Assignment</p>
-
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
+				<div className="Container">
+					<img src={logo} className="App-logo" alt="logo" />
+				</div>
 			</header>
+			<div className="Container">
+				<div className="App-Content">
+					<p className="Info-Text">
+						TODO Assignment
+					</p>
+				</div>
+			</div>
 		</div>
 	);
 }
