@@ -1,6 +1,7 @@
 import logo from "./logo.png";
 import "./App.css";
 import { connect } from "react-redux";
+import moment from "moment";
 
 function App() {
 	return (
@@ -12,9 +13,14 @@ function App() {
 			</header>
 			<div className="Container">
 				<div className="App-Content">
-					<p className="Info-Text">
-						TODO Assignment
-					</p>
+					<div className="Info">
+						<p>
+							TODO Assignment
+						</p>
+						<p>
+							Current time: {moment().format('LLLL')}
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

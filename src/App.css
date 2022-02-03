@@ -44,11 +44,16 @@
 	height: calc(100vh - 156px);
 }
 
-.Info-Text {
+.Info {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	height: 100%;
 	margin: 0px;
 	font-size: 32px;
+}
+
+.Info p {
+	margin-bottom: 20px;
 }
