@@ -41,7 +41,7 @@
 	padding: 16px;
 	background: #ffffff;
 	top: 104px;
-	height: calc(100vh - 156px);
+	height: calc(100vh - 168px);
 }
 
 .Info {
@@ -56,4 +56,17 @@
 
 .Info p {
 	margin-bottom: 20px;
+}
+
+.Placeholder {
+	width: 240px;
+	height: 240px;
+	margin-bottom: 16px;
+}
+
+.PlaceholderTitle {
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 0.75px;
 }
