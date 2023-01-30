@@ -3,7 +3,7 @@ import star from '../assets/images/star.png'
 import { useEffect, useState } from 'react';
 function Product({product,products,updateProducts,Uprod,Downprod})
 {
-    const [prodCon,UpProdCon]=useState(product.qty);
+    
     let bColor='';
     // useEffect(()=>{
     //   UpProdCon(product.qty)

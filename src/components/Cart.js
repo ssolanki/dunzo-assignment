@@ -6,9 +6,7 @@ import { useEffect } from 'react';
 
 function Cart({product,products,updateProducts,Uprod,Downprod})
 {
-    const [val,Uval]=useState(false)
-    const [max,Umax]=useState(true);
-    const [prodCon,UpProdCon]=useState(product.qty);
+    
     let bColor='';
     // useEffect(()=>{
     //     UpProdCon(product.qty)
@@ -25,12 +23,7 @@ function Cart({product,products,updateProducts,Uprod,Downprod})
 
 return (
     
-    <span className='c-cart-cont'>
-       
-        
-               
-                
-                
+    <span className='c-cart-cont'>         
                 <>
                
                 <div className='c-priCont c-cfl-con'>
