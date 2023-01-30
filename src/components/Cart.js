@@ -4,7 +4,7 @@ import nonVegIcon from '../assets/images/non-veg.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-function Cart({product,products,updateProducts})
+function Cart({product,products,updateProducts,Uprod,Downprod})
 {
     const [val,Uval]=useState(false)
     const [max,Umax]=useState(true);
@@ -14,39 +14,15 @@ function Cart({product,products,updateProducts})
     //     UpProdCon(product.qty)
     //     console.log(prodCon)
     //   },[product.qty])
-    const Uprod=()=>{
-        const prodqty=products.map((prod)=>{
-            {
-                if(prod.id==product.id&&product.qty<5)
-                {
-                    return {...prod,qty:product.qty+1};
-                }
-                else
-                return prod
-            }
-        });
-        updateProducts(prodqty);
-     }
-     const Downprod=()=>{
-      const prodqty=products.map((prod)=>{
-          {
-              if(prod.id==product.id&&product.qty>0)
-              {
-                
-                  return {...prod,qty:product.qty-1};
-              }
-              else
-              return prod
-          }
-      });
-      updateProducts(prodqty);
-   }
+
    if(product.qty==5)
    {
        bColor='c-add-color-d'
    }
    else
    bColor='';
+
+
 return (
     
     <span className='c-cart-cont'>
@@ -73,7 +49,7 @@ return (
           <span className='cc-full-h' onClick={()=>{
               
                   
-              Downprod();
+              Downprod(product);
         }}>
           <span className='c-minus-icon' ></span>
           </span>
@@ -82,7 +58,7 @@ return (
             <span className={
               'c-plus-icon cursor '+bColor} onClick={()=>{
             
-                Uprod();
+                Uprod(product);
           }}>+</span>
             </div>
             <span className='c-pri-fon'>

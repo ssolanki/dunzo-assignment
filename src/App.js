@@ -43,6 +43,7 @@ function App() {
 		}
 		fetchProducts();
 	},[])
+
 	useEffect(()=>{
 		let tot=0;
      products.forEach((product)=>{
@@ -55,6 +56,8 @@ function App() {
 	 localStorage.setItem("products",JSON.stringify(products))
 	 console.log(JSON.parse(localStorage.getItem("products")))
 	},[products])
+
+
 	const emptyCart=()=>{
 		const prodqty=products.map((prod)=>{
             {
@@ -69,7 +72,36 @@ function App() {
 		
 	}
 	
-	
+	const Uprod=(product)=>{
+      const prodqty=products.map((prod)=>{
+          {
+              if(prod.id==product.id&&product.qty<5)
+              {
+                  return {...prod,qty:product.qty+1};
+              }
+              else
+              return prod
+          }
+      });
+      updateProducts(prodqty);
+   }
+   
+   const Downprod=(product)=>{
+    const prodqty=products.map((prod)=>{
+        {
+            if(prod.id==product.id&&product.qty>0)
+            {
+              
+                return {...prod,qty:product.qty-1};
+            }
+            else
+            return prod
+        }
+    });
+    updateProducts(prodqty);
+ }
+
+
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -84,7 +116,7 @@ function App() {
 						    <div className="Prods-Cont">
 								{products.map((product)=>{
 									
-									return <Product key={product.id} product={product} products={products} updateProducts={updateProducts}/>
+									return <Product key={product.id} product={product} products={products} updateProducts={updateProducts} Uprod={Uprod} Downprod={Downprod}/>
 								})}
 							 
 							 </div>
@@ -108,7 +140,7 @@ function App() {
 								{products.length? products.map((product)=>{
 									console.log(product.qty)
 									if(product.qty)
-									return <Cart key={product.id} product={product} products={products} updateProducts={updateProducts}/>
+									return <Cart key={product.id} product={product} products={products} updateProducts={updateProducts} Uprod={Uprod} Downprod={Downprod}/>
 									else
 									return "";
 								}):''}

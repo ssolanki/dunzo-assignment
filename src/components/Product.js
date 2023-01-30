@@ -1,7 +1,7 @@
 import '../styles/Product.css'
 import star from '../assets/images/star.png'
 import { useEffect, useState } from 'react';
-function Product({product,products,updateProducts})
+function Product({product,products,updateProducts,Uprod,Downprod})
 {
     const [prodCon,UpProdCon]=useState(product.qty);
     let bColor='';
@@ -9,39 +9,15 @@ function Product({product,products,updateProducts})
     //   UpProdCon(product.qty)
     //   console.log(prodCon)
     // },[product.qty])
-    const Uprod=()=>{
-      const prodqty=products.map((prod)=>{
-          {
-              if(prod.id==product.id&&product.qty<5)
-              {
-                  return {...prod,qty:product.qty+1};
-              }
-              else
-              return prod
-          }
-      });
-      updateProducts(prodqty);
-   }
-   const Downprod=()=>{
-    const prodqty=products.map((prod)=>{
-        {
-            if(prod.id==product.id&&product.qty>0)
-            {
-              
-                return {...prod,qty:product.qty-1};
-            }
-            else
-            return prod
-        }
-    });
-    updateProducts(prodqty);
- }
+    
+
    if(product.qty==5)
    {
        bColor='c-add-color-d'
    }
    else
    bColor='';
+
     return (
         <>
         
@@ -58,7 +34,7 @@ function Product({product,products,updateProducts})
           <div className='but-fon add-color add-button cursor' onClick={()=>{
           
                 
-                Uprod();
+                Uprod(product);
           }}>
             
             <span className='dist plus-icon' >+</span> ADD
@@ -66,7 +42,7 @@ function Product({product,products,updateProducts})
               <span className='c-full-h' onClick={()=>{
               
                   
-              Downprod();
+              Downprod(product);
         }}>
           <span className='cc-minus-icon' ></span>
             </span>
@@ -76,7 +52,7 @@ function Product({product,products,updateProducts})
               'c-plus-icon cursor '+bColor} onClick={()=>{
              
                   
-                  Uprod();
+                  Uprod(product);
             }}>+</span>
             </div>
            }
