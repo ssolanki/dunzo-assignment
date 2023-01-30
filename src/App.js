@@ -1,6 +1,6 @@
 import "./App.css";
 import { connect } from "react-redux";
-import { useState, useEffect} from "react";
+import { useState, useEffect, useRef} from "react";
 import axios from "axios";
 // import moment from "moment";
 import empty_cart from "./assets/images/empty_cart.svg";
@@ -16,6 +16,7 @@ function App() {
 	const [items_data, setItems_data]= useState([])
 	const [isLoading, setLoading] = useState(true);
 	const [total,setTotal] = useState(0)
+	const firstUpdate = useRef(true);
 	// const [category, setCategory] = useState("")
 	const handlePay=()=>{
 		setcartItems(prevCartItems=> [])
@@ -102,9 +103,11 @@ function App() {
           setItems_data(res.data);
 		  if(localStorage.getItem("cartItems") !== null)
 		  {
-			let items=JSON.parse(localStorage.getItem("cartItems") || "[]");
-
-			setcartItems(prevcartItems=>items);
+			let items=JSON.parse(localStorage.getItem("cartItems"));
+			console.log("After fetch");
+			console.log(items);
+			console.log(cartItems);
+			setcartItems(prevcartItems=>items); 
           }
 		  setLoading(false);
         })
@@ -113,6 +116,10 @@ function App() {
         });
 	},[]);
 	useEffect(() =>{
+		if(firstUpdate.current){
+			firstUpdate.current = false;
+			return;
+		}
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));
 		let amount =0;
 		for(let i=0; i<cartItems.length; i++) {
