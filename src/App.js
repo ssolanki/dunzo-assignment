@@ -79,7 +79,7 @@ function App() {
 			</header>
 			<div className="Container">
 				<div className="App-Content">
-					       <div>
+					       <div >
 						   <div className='prod-type-head'>Products - <span className="prod-qty-font">40 results</span></div>
 						    <div className="Prods-Cont">
 								{products.map((product)=>{
