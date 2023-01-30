@@ -1,5 +1,5 @@
 import '../styles/Cart.css'
-import cartImg from '../assets/images/Group 3186.png';
+
 import nonVegIcon from '../assets/images/non-veg.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -51,14 +51,10 @@ return (
     
     <span className='c-cart-cont'>
        
-        {
-             val?
-                <span className='c-cart-img-c'>
-                   
-                <img className='c-cart-img' src={cartImg} alt='Empty Cart' />
-                </span>
+        
+               
                 
-                :
+                
                 <>
                
                 <div className='c-priCont c-cfl-con'>
@@ -66,7 +62,7 @@ return (
                     <img src={nonVegIcon} alt='non-veg icon' className='veg-icon'></img>
           <div className='c-prodTi c-card-itemf'>
           <div>
-          {product.title.slice(0,21)}
+          {product.title}
           </div>
           <div className='c-max-prod-font'>{product.qty==5?'Max. 5. allowed':''}</div>
           </div>
@@ -96,7 +92,7 @@ return (
 
         </div>
         </> 
-        }
+        
        
       </span>
     

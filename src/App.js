@@ -7,6 +7,8 @@ import placeHolderImg from "./assets/images/placeholder.png"
 import { useEffect, useState } from "react";
 import Cart from "./components/Cart";
 import Totaling from "./components/Totaling";
+import cartImg from './assets/images/Group 3186.png'
+import { min } from "moment";
 // Note: use moment for formatting date like moment().format('LLLL')
 
 function App() {
@@ -20,7 +22,12 @@ function App() {
 			if(!localStorage.getItem("products")||JSON.parse(localStorage.getItem("products")).length===0)
 			{
 				const prodqty=data.map((prod)=>{
-					return {...prod,qty:0}
+					var str   = prod.title;
+                 var stringArray = str.split(/(\s+)/);
+				 var title="";
+				 for(var i=0;i<Math.min(6,stringArray.length);i++)
+				 title+=stringArray[i];
+					return {...prod,qty:0,title:title}
 				});
 				localStorage.setItem("products",JSON.stringify(prodqty))
 				updateProducts(prodqty);
@@ -61,7 +68,7 @@ function App() {
         updateProducts(prodqty);
 		
 	}
-	const [val,Uval]=useState(true);
+	
 	
 	return (
 		<div className="App">
@@ -83,7 +90,7 @@ function App() {
 							 </div>
 							 </div>
 							 <div className="price-qty-cont" >
-								{val? <div className='c-heading-cont'>
+								{total? <div className='c-heading-cont'>
                       <h1 className='c-cart-fs c-order-h c-mar'>Your Order</h1>
                       <span className='c-clear-c cursor' onClick={emptyCart}>Clear Cart</span>
 
@@ -92,8 +99,11 @@ function App() {
 					  <h1 className='c-cart-fs c-mar'>Your Order</h1>
 					  </div>
 					  }
-					  
-							 <div className="check-com ">
+					  { !total?<span className='c-cart-img-c'>
+                   
+				   <img className='c-cart-img' src={cartImg} alt='Empty Cart' />
+				   </span>
+							: <div className="check-com ">
 								<div className="prod-item-cont">
 								{products.length? products.map((product)=>{
 									console.log(product.qty)
@@ -107,6 +117,7 @@ function App() {
 							 <Totaling total={total} products={products} emptyCart={emptyCart}/>
 							 </div>:''}
 							 </div>
+							 }
 							 </div>
 					
 				</div>

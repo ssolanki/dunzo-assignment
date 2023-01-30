@@ -185,3 +185,13 @@ margin-top: 1%
 {
     cursor: context-menu;;
 }
+
+.c-cart-img
+{
+    width: 257px;
+    display: block;
+  margin-left: 10%;
+  margin-right: auto;
+  margin-top: 30%;
+   
+}

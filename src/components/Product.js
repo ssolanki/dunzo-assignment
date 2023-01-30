@@ -48,7 +48,7 @@ function Product({product,products,updateProducts})
         <span className='prodCont prod-fon'>
         <img src={product.image} className='pImg'></img>
         <div className='priCont'>
-          <div className='prodTi prodF'>{product.title.slice(0,21)}</div>
+          <div className='prodTi prodF'>{product.title}</div>
           <div className='starF'><img src={star} alt='star' className='star-dist'></img>{product.rating.rate}</div>
         </div>
         <div className='coCont'>
