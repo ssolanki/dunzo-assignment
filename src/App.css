@@ -29,7 +29,7 @@
 .Container {
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1024px;
+	max-width: 1300px;
 }
 
 .App-link {
@@ -37,11 +37,13 @@
 }
 
 .App-Content {
+	display: flex;
+	flex-direction: row;
 	position: relative;
 	padding: 16px;
 	background: #ffffff;
-	top: 104px;
-	height: calc(100vh - 168px);
+	top: 76px
+	
 }
 
 .Info {
@@ -69,4 +71,117 @@
 	font-size: 20px;
 	text-align: center;
 	letter-spacing: 0.75px;
+}
+.Prods-Cont
+{
+	width: 65%;
+	height: 100%;
+	display: flex;
+    flex-flow: row wrap;
+	
+	
+}
+.check-com
+{
+	
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    height: 80vh;
+	padding: 1%;
+	padding-left: 3%;
+	
+	
+	
+}
+.but-fon
+{
+	font-family: 'Gilroy';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 16px;
+}
+.prod-type-head
+{
+    font-weight: 600;
+font-size: 28px;
+line-height: 33px;
+margin-bottom: 3%;
+border-bottom: 1px solid #E1E3EA;
+width: 59vw;
+padding-bottom: 1%;
+}
+.prod-qty-font
+{
+
+
+color: #6F7588;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+}
+
+.price-qty-cont
+{
+	margin-left: 59%;
+	border-left: 1px solid #E1E3EA;
+	width: 30%;
+	position: fixed;
+	height: 100%;
+	
+}
+
+.c-cart-fs
+{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+   
+}
+
+.c-heading-cont
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+	gap: 46%;
+    border-bottom: 1px solid #E1E3EA;
+    width: 95%;
+}
+.c-order-h
+{
+    width: 40%;
+    
+    padding-bottom: 4%;
+}
+.c-clear-c
+{
+    font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+width: 23%;
+color: #5A27CF;
+margin-top: 1%
+}
+.c-em-oh
+{
+	
+    width: 95%;
+	padding-bottom: 3%;
+}
+
+.c-mar
+{
+	margin-left: 3%;
+}
+.t-total-cont
+{
+	border-top: 1px solid black;
+}
+
+.cursor
+{
+    cursor: context-menu;;
 }

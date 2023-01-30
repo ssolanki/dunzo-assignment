@@ -1,0 +1,172 @@
+.c-cart-cont
+{
+    padding: 3%;
+    
+    
+}
+.c-cart-font
+{
+    font-family: 'Gilroy';
+font-style: normal;
+
+
+letter-spacing: 0.1px;
+
+
+color: #171E30;
+}
+
+
+
+.c-cart-img
+{
+    width: 257px;
+    display: block;
+  margin-left: 5%;
+  margin-right: auto;
+  margin-top: 30%;
+   
+}
+.c-priCont
+{
+    
+    display: flex;
+    flex-direction: row;
+}
+.c-prodTi
+{
+    
+    margin-bottom: 2%;
+    
+   
+}
+
+
+.c-add-color
+{
+    color: #00B37A;
+    
+}
+.c-add-button
+{
+    
+    padding: 4% 4% 4% 4%;
+    width: 43%;
+    background: #FFFFFF;
+border: 1px solid #E7E8EB;
+border-radius: 40px;
+}
+.c-plus-icon
+{
+    font-size: 17px;
+}
+.c-minus-icon
+{
+    display: inline-block;
+    width: 10px;
+    height: 2px;
+    background: #6F7588;
+border-radius: 1px;
+margin-left: 7%;
+margin-bottom: 35%;
+
+}
+
+.c-but-fon
+{
+    font-size: 15px;
+    font-weight: 700;
+}
+.c-qty
+{
+    margin: 0 20% 0 20%;
+    font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+
+text-align: center;
+letter-spacing: 0.2px;
+
+
+color: #171E30;
+}
+.c-cart-itemf
+{
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+}
+
+.c-pri-fon
+{
+    font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+
+}
+
+.c-cfl-con
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+align-items: center;
+padding: 0px;
+
+}
+.c-bp-cont
+{
+    width: 37%;
+    display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ gap:2%;
+ align-items: center;
+ margin-bottom: 3%;
+    
+}
+
+.c-max-prod-font
+{
+    font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #C68815;
+margin-top: 4%;
+}
+
+.prod-type-head
+{
+    font-weight: 600;
+font-size: 28px;
+line-height: 33px;
+}
+
+.prod-item-cont
+{
+    overflow: auto;
+}
+
+.cc-full-h
+{
+    display: inline-block;
+    margin-left: 9%;
+    height: 100%;
+    
+}
+.veg-icon
+{
+    height: 18px;
+    width: 18px;
+}
+.icon-pri-cont
+{
+    display: flex;
+    gap: 5%;
+    width: 50%;
+}
+
+.cursor
+{
+    cursor: context-menu;;
+}

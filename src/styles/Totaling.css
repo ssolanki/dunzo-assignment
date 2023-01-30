@@ -1,0 +1,99 @@
+.t-priCont
+{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.t-cfl-con
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 20%;
+}
+
+.t-prodTi
+{
+    
+    margin-bottom: 2%;
+   
+}
+
+.t-cart-itemf
+{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    
+}
+
+.t-bp-cont
+{
+    width: 37%;
+    display: flex;
+ flex-direction: row;
+ justify-content: right;
+
+    
+}
+
+.t-priCont
+{
+    
+    display: flex;
+    flex-direction: row;
+}
+.t-priCont3
+{
+    margin-top: 3%;
+}
+.t-priCont5
+{
+    margin-top: 5%;
+}
+.t-pri-fon
+{
+
+margin-right: 6%;
+}
+
+.t-total-f
+{
+    font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.1px;
+
+}
+
+.t-pay-button
+{
+    background: #5A27CF;
+border-radius: 8px;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+padding-top: 5%;
+    padding-bottom: 5%;
+text-align: center;
+letter-spacing: 0.2px;
+width: 98%;
+
+
+color: #FFFFFF;
+
+}
+.t-button-adj
+{
+    padding-left: 1%;
+    margin-top: 7%;
+}
+
+.cursor
+{
+    cursor: context-menu;;
+}
