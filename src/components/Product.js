@@ -5,12 +5,7 @@ function Product({product,products,updateProducts,Uprod,Downprod})
 {
     
     let bColor='';
-    // useEffect(()=>{
-    //   UpProdCon(product.qty)
-    //   console.log(prodCon)
-    // },[product.qty])
     
-
    if(product.qty==5)
    {
        bColor='c-add-color-d'
